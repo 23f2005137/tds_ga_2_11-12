@@ -199,6 +199,11 @@ async def list_orders(limit: int = 10, cursor: str = None):
     next_cursor = encode_cursor(end) if end < len(CATALOG) else None
     return {"items": items, "next_cursor": next_cursor}
 
+from fastapi.responses import FileResponse
+
+@app.get("/answer.json")
+async def answer():
+    return FileResponse("answer.json", media_type="application/json")
 
 @app.get("/")
 async def root():
