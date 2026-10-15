@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: tds-ga2-api
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.9
+      - key: EMAIL
+        value: your-email@example.com   # <-- change to your logged-in exam email
