@@ -18,7 +18,7 @@ from fastapi.responses import JSONResponse, Response
 from starlette.middleware.base import BaseHTTPMiddleware
 
 # ---------------------------------------------------------------- config
-TOTAL_ORDERS = int(os.getenv("TOTAL_ORDERS", "57"))            # Q11  T
+TOTAL_ORDERS = int(os.getenv("TOTAL_ORDERS", "55"))            # Q11  T
 ORDERS_RATE_LIMIT = int(os.getenv("ORDERS_RATE_LIMIT", "20"))  # Q11  R / 10s
 PING_RATE_LIMIT = int(os.getenv("PING_RATE_LIMIT", "9"))       # Q12  B / 10s
 WINDOW_SECONDS = 10
